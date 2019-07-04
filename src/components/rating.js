@@ -19,6 +19,7 @@ function Rating(props) {
         defaultValue={rate}
         style={{ width: "70px" }}
       >
+        <Option value={0}>All</Option>
         <Option value={1}>1*</Option>
         <Option value={2}>2*</Option>
         <Option value={3}>3*</Option>
