@@ -17,3 +17,7 @@ export const removeItem = id => ({
   type: REMOVE_ITEM,
   payload: { id }
 });
+
+export const setRating = value => ({
+  type: value
+});
