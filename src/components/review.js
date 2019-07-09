@@ -1,8 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Comment, Rate } from "antd";
+import { connect } from "react-redux";
 
-function Review({ review }) {
+function Review({ id, review }) {
+  console.log(`пришло сверху ${id}`);
+
   return (
     <Comment
       style={{
@@ -30,4 +33,13 @@ Review.propTypes = {
   }).isRequired
 };
 
-export default Review;
+const mapStateToProps = (state, ownProps) => {
+  console.log(`Здесь будут ownProps`);
+  console.log(ownProps);
+
+  return {
+    review: state.reviews[ownProps.id]
+  };
+};
+
+export default connect(mapStateToProps)(Review);

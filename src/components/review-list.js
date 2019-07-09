@@ -10,7 +10,7 @@ function ReviewList({ reviews }) {
     <List>
       {reviews.map(review => (
         <List.Item key={review.id}>
-          <Review review={review} />
+          <Review id={review} />
         </List.Item>
       ))}
     </List>

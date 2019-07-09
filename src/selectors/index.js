@@ -58,7 +58,7 @@ export const filtratedRestaurantsSelector = createSelector(
       item => item.rating >= filters.minRating
     );
 
-    // console.log(filtratedArray);
+    console.log(filtratedArray);
 
     return filtratedArray;
   }
