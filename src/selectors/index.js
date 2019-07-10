@@ -31,3 +31,5 @@ export const avarageRateSelector = (state, { restaurant }) =>
     .map(id => reviewSelector(state, { id }).rating)
     .filter(rate => typeof rate !== "undefined")
     .reduce((acc, el, _, arr) => acc + el / arr.length, 0);
+
+export const loadingSelector = state => state.restaurants.get("loading");
