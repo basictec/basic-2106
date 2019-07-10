@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Comment, Rate } from "antd";
 import { connect } from "react-redux";
+import { reviewSelector } from "../selectors";
 
 function Review({ id, review }) {
   console.log(`пришло сверху ${id}`);
@@ -38,8 +39,12 @@ const mapStateToProps = (state, ownProps) => {
   console.log(ownProps);
 
   return {
-    review: state.reviews[ownProps.id]
+    review: reviewSelector(state, ownProps)
   };
 };
 
 export default connect(mapStateToProps)(Review);
+
+// return {
+//   review: state.reviews[ownProps.id]
+// };

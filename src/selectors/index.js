@@ -63,3 +63,5 @@ export const filtratedRestaurantsSelector = createSelector(
     return filtratedArray;
   }
 );
+
+export const reviewSelector = (state, { id }) => state.reviews[id];
